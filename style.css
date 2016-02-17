@@ -1,0 +1,135 @@
+@font-face {
+  font-family: glyph;
+  src: url('./fonts/glyphicons-halflings-regular.eot');
+  src: url('./fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('./fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('./fonts/glyphicons-halflings-regular.woff') format('woff'), url('./fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('./fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+
+* {  
+  border: 0;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  position: relative;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #e7eaeb;
+  -moz-user-select: none; 
+  -khtml-user-select: none; 
+  -webkit-user-select: none; 
+  -o-user-select: none;
+}
+
+body * {
+  cursor: default;
+}
+
+body.n * {
+  cursor: n-resize;
+}
+body.s * {
+  cursor: s-resize;
+}
+body.e * {
+  cursor: e-resize;
+}
+body.w * {
+  cursor: w-resize;
+}
+body.n.w * {
+  cursor: nw-resize;
+}
+body.n.e * {
+  cursor: ne-resize;
+}
+body.s.e * {
+  cursor: se-resize;
+}
+body.s.w * {
+  cursor: sw-resize;
+}
+
+.header {
+  height: 45px;
+  background-color: #51445f;
+  color: #616f77;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 200px;
+  background-color: #493d55;
+  padding-top: 100px;
+}
+
+.sidebar .sidebar-item {
+  width: 200px;
+  height: 42px;
+  color: rgba(255,255,255,.5);
+  padding: 12px 15px;
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+.sidebar .sidebar-item:hover {
+  background-color: rgba(0,0,0,.2);
+}
+
+.portlet-pane {
+  position: absolute;
+  left: 0;
+  right: 200px;
+}
+
+.portlet {
+  position: absolute;
+  border-radius: 2px;
+  background-color: white;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 2px 1px -1px rgba(0,0,0,.12);
+  
+  /*filter: blur(1px);
+  -webkit-filter: blur(1px);*/
+}
+
+.portlet .title {
+  color: white;
+  padding: 5px 5px 0;
+  text-align: center;
+  background-color: #394658;
+}
+
+.portlet .handle {
+  padding-bottom: 5px;
+}
+
+.portlet .handle, .portlet .handle * {
+  cursor: move;
+}
+
+.portlet .title .x {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+.portlet .title .x:before {
+  font-family: glyph;
+  content: "\e014";
+}
+.portlet .title .o {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  cursor: pointer;
+}
+.portlet .title .o:before {
+  font-family: glyph;
+  content: "\e019";
+}
+
+.portlet .contents {
+  padding: 5px;
+}

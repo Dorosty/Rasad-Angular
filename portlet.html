@@ -1,0 +1,33 @@
+<div class="portlet" rsd-draggable rsd-resizable rsd-z-indexed ng-style="{top: top, left: left, width: width, height: height}">
+  <div class="title">
+    <div class="handle" rsd-draggable-handle>
+      <div ng-bind="title"></div>
+      <div class="x" rsd-draggable-omit ng-click="destroy()"></div>
+      <div class="o" rsd-draggable-omit ng-click="gotoOptions()"></div>
+    </div>
+  </div>
+  <div class="contents" ng-if="!options">
+    <table ng-if="contents === 'Events'" datatable="ng" dt-options="{paging:false}" class="row-border hover">
+      <thead>
+      <tr>
+        <th>ID</th>
+        <th>FirstName</th>
+        <th>LastName</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr ng-repeat="person in persons">
+        <td>{{ person.id }}</td>
+        <td>{{ person.firstName }}</td>
+        <td>{{ person.lastName }}</td>
+      </tr>
+      </tbody>
+    </table>
+    <span ng-if="contents === 'Resources'">Resources</span>
+    <span ng-if="contents === 'Alerts'">Alerts</span>
+  </div>
+  <div class="contents" ng-if="options">
+    <h1>options</h1>
+    <div style="margin-top:30px; color:lightblue; cursor:pointer" ng-click="goBack()">go back</div>
+  </div>
+</div>

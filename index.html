@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+<head>
+  <title>Rasad</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="datatables.css" />
+  <script src="jquery.js"></script>
+  <script src="datatables.js"></script>
+  <script src="angular.js"></script>
+  <script src="angular-datatables.js"></script>
+  <script src="app.js"></script>
+</head>
+<body ng-app="app" ng-controller="app">
+  <rsd-header></rsd-header>
+  <rsd-sidebar on-create="createPortlet"></rsd-sidebar>
+  <rsd-portlet-pane update="subscribeToPortletsUpdate"></rsd-portlet-pane>
+</body>
+</html>
